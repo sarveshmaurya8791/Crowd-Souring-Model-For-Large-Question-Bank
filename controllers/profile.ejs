@@ -1,0 +1,14 @@
+<div>
+        <% if (message.length > 0) { %>
+          <div><%= message %></div>
+        <% } else {%>
+         
+              <nav class="title" style="background-color:red;height:80px;padding-top:0px;">
+			 
+			   <div style="margin-left:1000px;padding-top:20px;"><%=data[0].email%>
+                 <img alt="User Pic" style="width:38px;height:38px;margin-left:270px;border-radius=50%;-moz-border-radius:50%;-webkit-border-radius:50%;" class="rounded" src="http://localhost:8012/images/upload_images/<%=data[0].image%>">
+				</div>
+				</nav>
+         
+        <% } %>
+        </div>

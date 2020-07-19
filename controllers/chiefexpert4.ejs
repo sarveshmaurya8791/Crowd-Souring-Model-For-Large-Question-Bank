@@ -1,0 +1,105 @@
+<div>
+        <% if (message.length > 0) { %>
+          <div><%= message %></div>
+        <% } else {%>
+         
+              <nav class="title" style="background-color:red;height:100px;padding-top:0px;">
+			   <div style="margin-left:20px;padding-top:20px;"><a href="http://localhost:8012/chiefexpertprofile/<%=data[0].id%>">Back</a></div>
+	
+			   <div style="margin-left:1000px;"><%=data[0].email%>
+                 <img alt="User Pic" style="width:38px;height:38px;margin-left:270px;border-radius=50%;-moz-border-radius:50%;-webkit-border-radius:50%;" class="rounded" src="http://localhost:8012/images/upload_images/<%=data[0].image%>">
+				</div>
+				</nav>
+				<script>
+     function check(form){
+       alert("Submitted Successsfully");
+	}
+</script>
+
+
+
+        
+
+        <% for(var i=0; i < data.length-1; i++) { %>
+   
+ <body>
+          
+         <form onsubmit="return check(this)" action="/controllers/register-controller6" method="POST" enctype="multipart/form-data">   
+
+
+<br>
+        <div>
+		<h1>NEW QUESTION</h1>
+		<div style="margin-top:40px;"><tr><td>id1:</td>
+		<td><input type="text" name="id1" value="<%=data[i].id1%>"/></td></tr> </div>
+       <div style="margin-top:5px;"><tr><td>expert_id:</td>
+		<td><input type="text" name="expert_id" value="<%=data[i].id%>"/></td></tr> </div>
+		
+		 <div style="margin-top:10px;"><tr><td>user_id:</td>
+		<td><input type="text" name="user_id" value="<%=data[i].user_id%>"/></td></tr> </div>
+        <div style="margin-top:10px;"> <tr><td>Question is:</td>
+		<td><input style="width:1500px;height:50px;" type="text" name="question" value="<%=data[i].question%>"/></td></tr> </div>
+		<div style="margin-top:10px;"><tr><td>image:</td>
+		<td><input type="text" name="image" value="<%=data[i].image1%>"/></td>
+		 
+		<img alt="Question Pic" style="width:200px;height:200px;margin-left:100px;" src="http://localhost:8012/images/upload_images1/<%=data[i].image%>"></tr></div>
+		<div style="margin-top:5px;"><tr><td>Options are:</td>
+		       <td>1.</td><td><input type="varchar" value="<%=data[i].o1%>" name="o1"/></td>
+			   <td>2.</td> <td><input type="varchar" value="<%=data[i].o2%>" name="o2"/></td>
+			   <td>3.</td><td><input type="varchar" value="<%=data[i].o3%>" name="o3"/></td>
+			   <td>4.</td><td><input type="varchar" value="<%=data[i].o4%>" name="o4"/></td></tr></div>
+			  <div style="margin-top:5px;"><tr> <td>Correct answer:</hd><td><input type="varchar" value="<%=data[i].correct%>" name="correct"/></td></tr></div>
+			  <h3>Mark Tick If You Want To Delete</h3>
+		<div style="margin-top:10px;"><td><input type="checkbox" name="choice" value="1"/></td></div>
+		<div style="margin-left:500px;margin-top:20px;">
+			   <tr><h1><input type="submit" value="Submit"/></h1></tr></div>
+        <div style="margin-top:40px;margin-left:100px;margin-right:100px;"><br><hr>
+		<hr></div>
+		</div>
+		 </form>
+	  </body>
+		<% } %>
+		
+		
+		
+		var i=data.length-1;
+		
+		<body>
+          
+         <form onsubmit="return check(this)" action="/controllers/register-controller7" method="POST" enctype="multipart/form-data">   
+
+
+<br>
+        <div>
+		<h1>NEW QUESTION</h1>
+		<div style="margin-top:40px;"><tr><td>id1:</td>
+		<td><input type="text" name="id1" value="<%=data[i].id1%>"/></td></tr> </div>
+       <div style="margin-top:5px;"><tr><td>expert_id:</td>
+		<td><input type="text" name="expert_id" value="<%=data[i].id%>"/></td></tr> </div>
+		
+		 <div style="margin-top:10px;"><tr><td>user_id:</td>
+		<td><input type="text" name="user_id" value="<%=data[i].user_id%>"/></td></tr> </div>
+        <div style="margin-top:10px;"> <tr><td>Question is:</td>
+		<td><input style="width:1500px;height:50px;" type="text" name="question" value="<%=data[i].question%>"/></td></tr> </div>
+		<div style="margin-top:10px;"><tr><td>image:</td>
+		<td><input type="text" name="image" value="<%=data[i].image1%>"/></td>
+		 
+		<img alt="Question Pic" style="width:200px;height:200px;margin-left:100px;" src="http://localhost:8012/images/upload_images1/<%=data[i].image%>"></tr></div>
+		<div style="margin-top:5px;"><tr><td>Options are:</td>
+		       <td>1.</td><td><input type="varchar" value="<%=data[i].o1%>" name="o1"/></td>
+			   <td>2.</td> <td><input type="varchar" value="<%=data[i].o2%>" name="o2"/></td>
+			   <td>3.</td><td><input type="varchar" value="<%=data[i].o3%>" name="o3"/></td>
+			   <td>4.</td><td><input type="varchar" value="<%=data[i].o4%>" name="o4"/></td></tr></div>
+			  <div style="margin-top:5px;"><tr> <td>Correct answer:</hd><td><input type="varchar" value="<%=data[i].correct%>" name="correct"/></td></tr></div>
+			  <h3>Mark Tick If You Want To Delete</h3>
+		<div style="margin-top:10px;"><td><input type="checkbox" name="choice" value="1"/></td></div>
+		<div style="margin-left:500px;margin-top:20px;">
+			   <tr><h1><input type="submit" value="Submit"/></h1></tr></div>
+        <div style="margin-top:40px;margin-left:100px;margin-right:100px;"><br><hr>
+		<hr></div>
+		</div>
+		 </form>
+	  </body>
+     
+        <% } %>
+        </div>
