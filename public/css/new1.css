@@ -1,0 +1,120 @@
+*{
+	margin:0;
+padding:0;
+font-family:Arial;
+}
+
+
+.slider{
+	width:1375px;
+	height:100vh;
+	
+	background:url(/images/scenary.jpg);
+	
+	animation:slide 60s infinite;
+}
+
+@keyframes slide{
+	25%{
+		background:url(/images/images2.jpg);
+	}
+	50%{
+		background:url(/images/download1.jpg);
+	}
+	75%{
+		background:url(/images/download.jpg);
+	}
+	100%{
+		background:url(/images/scenary.jpg);
+	}
+}
+.logo img{
+	
+	float:left;
+	width:100px;
+	height:100px;
+	position:absolute;
+	background-color:red;
+	top:8%;
+	left:4%;
+	transform:translate(-50%,-50%);
+}
+
+.s1 {
+	
+	position:absolute;
+	background-color:red;
+	top:8%;
+	left:40%;
+	transform:translate(-50%,-50%);
+}
+.s1 h1{
+	 color:#fff;
+	 font-size:30px;
+}
+
+ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+
+
+}
+
+ul li{
+	float:left;
+	width:120px;
+	height:40px;
+	background-color:black;
+	opacity:.8;
+	line-height:40px;
+	text-align:center;
+	font-size:20px;
+	margin-right:2px;
+}
+
+ul li a{
+	text-decoration:none;
+	color:white;
+	display:block;
+	 border:1px solid transparent;
+	 transition:0.6s ease;
+	
+	
+}
+
+ul li a:hover{
+	background-color:green;
+}
+
+ul li ul li{
+display:none;
+}
+ul li:hover ul li{
+	display:block;
+}
+ul li.active a{
+	background-color:#fff;
+	color:#000;
+}
+
+
+
+.title{
+	
+	position:absolute;
+
+	top:20%;
+	left:30%;
+	transform:translate(-50%,-50%);
+}
+.title1{
+	position:absolute;
+	top:60%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.title1 h1{
+	 color:#fff;
+	 font-size:70px;
+}

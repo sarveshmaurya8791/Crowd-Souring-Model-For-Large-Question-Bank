@@ -1,0 +1,50 @@
+<html>
+ <head>
+ <title>TEACHER REGISTRATION PAGE</title>
+ <script>
+     function checkPassword(form){
+	    password1=form.password.value;
+		password2=form.password2.value;
+	if(password1=='')
+       alert("Please enter Password");
+    else if(password2=='')
+     alert("Please enter Confirm Password");
+    else if(password1!=password2){
+         alert("\nPassword did not match:Please try again...")
+         return false;
+        }
+    else{
+        alert("Password Match!"	)
+		return true;
+		}
+	}
+</script>
+</head>
+<body background="/images/scenary.jpg">
+ <form  onsubmit="return checkPassword(this)" action="/controllers/register-controller" method="POST" enctype="multipart/form-data">    
+<table border="1" align="center">
+<caption>TEACHER REGISTRATION PAGE</caption>
+<tr><td>USER NAME </td>
+<td><input type="text" name="name"/></td></tr>
+<tr>
+<td>DOB</td>
+<td><input type="date" name="dob"/></td></tr>
+<tr><td>GENDER</td>
+<td><input type="radio" name="gender" value="M"/>Male
+<input type="radio" name="gender" value="F"/>Female
+</td></tr>
+<tr><td>MOBILE NUMBER</td>
+<td><input type="text" name="mob"/></td></tr>
+<tr><td>EMAIL ID</td>
+<td><input type="text" name="email"/></td></tr>
+<tr><td>Profile Image</td>
+<td><input type="file" name="image" accept=""/></td></tr>
+<tr><td>SET PASSWORD</td>
+<td><input type="password" name="password"/></td></tr>
+<tr><td>CONFIRM PASSWORD</td>
+<td><input type="password" name="password2"/></td></tr>
+<tr><td><input type="submit" value="Submit"/></td></tr>
+</form>
+</body>
+</html>
+
