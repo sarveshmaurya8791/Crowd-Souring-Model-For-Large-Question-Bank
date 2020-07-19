@@ -1,0 +1,45 @@
+<div>
+        <% if (message.length > 0) { %>
+          <div><%= message %></div>
+        <% } else {%>
+         
+              <nav class="title" style="background-color:red;height:100px;padding-top:0px;">
+			   <div style="margin-left:20px;padding-top:20px;"><a href="http://localhost:8012/index2.html">Logout</a></div>
+	
+			   <div style="margin-left:1000px;"><%=data[0].email%>
+                 <img alt="User Pic" style="width:38px;height:38px;margin-left:270px;border-radius=50%;-moz-border-radius:50%;-webkit-border-radius:50%;" class="rounded" src="http://localhost:8012/images/upload_images/<%=data[0].image%>">
+				</div>
+				</nav>
+				<script>
+     function check(form){
+       alert("Submitted Successsfully");
+	}
+</script>
+
+           
+			
+				<body background="/images/scenary.jpg">
+ <form onsubmit="return check(this)" action="/controllers/register-controller1" method="POST" enctype="multipart/form-data">    
+				 <div >
+				 <tr><h3>user_id</h3>
+				 <td><input type="number" name="id1" value="<%=data[0].id%>"/></td>
+				 <tr><h1> Enter question</h1>
+		
+                   <textarea style="width:400px;height:150px;margin-left:250px;" cols="10" rows="10" type="text" name="question"></textarea></tr>
+               <tr><td>Insert Image</td>
+               <td><input type="file" name="image1" accept=""/></td></tr>
+			   <tr><h3>Options are:</h3>
+			   <td>1.</td><td><input type="varchar" name="o1"/></td>
+			  <td>2.</td> <td><input type="varchar" name="o2"/></td>
+			   <td>3.</td><td><input type="varchar" name="o3"/></td>
+			   <td>4.</td><td><input type="varchar" name="o4"/></td></tr>
+			   <tr><h3>Correct answer:</h3><td><input type="varchar" name="correct"/></td></tr>
+			   </div>
+			   <div style="margin-left:500px;margin-top:20px;">
+			   <tr><h1><input type="submit" value="Submit"/></h1></tr>
+               </form>
+				</div>
+				</body>
+         
+        <% } %>
+        </div>

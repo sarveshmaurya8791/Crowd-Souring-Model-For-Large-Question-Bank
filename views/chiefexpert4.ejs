@@ -1,0 +1,50 @@
+<div>
+        <% if (message.length > 0) { %>
+          <div><%= message %></div>
+        <% }
+		else if(message1.length > 0) { %>
+          <div><%= message1 %></div>
+        <% }
+		else {%>
+	
+
+<script>
+function myFunction() {
+  window.print();
+}
+
+</script>
+
+        <% for(var x=0; x<arr.length; x++) { %>
+		
+ 
+		<body>
+          
+         <form onsubmit="return myFunction()" >   
+
+
+<br>
+        <div>
+        <div style="margin-top:10px;">
+		<tr><td><%=x+1%>.</td><td><%=data[arr[x]].question%></td></tr> </div>
+		<div style="margin-top:10px;">
+		
+	<td><img alt="Question Pic" style="width:200px;height:200px;margin-left:1000px;" src="http://localhost:8012/images/upload_images1/<%=data[arr[x]].image1%>"></td></tr></div>
+	<div style="margin-left:1030px;">Fig.<%=x+1%></div>
+		<div style="margin-top:5px;"><tr><td>Options are:</td>
+		       <td>A.</td><td><%=data[arr[x]].o1%></td>
+			   <td>B.</td> <td><%=data[arr[x]].o2%></td>
+			   <td>C.</td><td><%=data[arr[x]].o3%></td>
+			   <td>D.</td><td><%=data[arr[x]].o4%></td></tr></div>
+		
+        <div style="margin-top:40px;margin-left:100px;margin-right:100px;"><br>
+		</div>
+		</div>
+		 </form>
+	  </body>
+ 
+		<% } %>
+		<div style="margin-left:500px;margin-top:20px;">
+			   <tr><h1><input type="submit" value="print"/></h1></tr></div>
+        <% } %>
+        </div>

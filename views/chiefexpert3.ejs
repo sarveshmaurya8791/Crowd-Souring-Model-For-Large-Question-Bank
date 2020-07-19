@@ -1,0 +1,30 @@
+<div>
+        <% if (message.length > 0) { %>
+          <div><%= message %></div>
+        <% } else {%>
+         
+              <nav class="title" style="background-color:red;height:100px;padding-top:0px;">
+			   <div style="margin-left:20px;padding-top:20px;"><a href="http://localhost:8012/chiefexpertprofile/<%=data[0].id%>">Back</a></div>
+	
+			   <div style="margin-left:1000px;"><%=data[0].email%>
+                <img alt="User Pic" style="width:38px;height:38px;margin-left:270px;border-radius=50%;-moz-border-radius:50%;-webkit-border-radius:50%;" class="rounded" src="http://localhost:8012/images/upload_images/<%=data[0].image%>">
+				</div>
+				</nav>
+				
+				<body>
+				
+
+				<form action="/controllers/register-controller8" method="POST" enctype="multipart/form-data">   
+				<div style="margin-top:20px;">
+				<tr><td>id:</td>
+				<td><input type="text" name="id" value="<%=data[0].id%>"/>
+				<h3>No.Of Questions Available In Question Bank:</h3>
+				<input type="number" name="aq" value="<%=data[data.length-1].id1%>"/></div>
+				<h2>Enter No.Of Questions You Want To Select:</h2>
+				<input type="number" name="n"/></div>
+				<div style="margin-left:500px;margin-top:20px;">
+			   <tr><h1><input type="submit" value="Submit"/></h1></tr></div>
+				 </form>
+                 </body>				 
+        <% } %>
+      

@@ -1,0 +1,31 @@
+<div>
+        <% if (message.length > 0) { %>
+          <div><%= message %></div>
+        <% } else {%>
+         
+              <nav class="title" style="background-color:red;height:100px;padding-top:0px;">
+			   <div style="margin-left:20px;padding-top:20px;"><a href="http://localhost:8012/index2.html">Logout</a>
+			   <a style="margin-left:400px;margin-top:0px;" href="http://localhost:8012/chiefexpertprofile3/<%=data[0].id%>">Set Question Paper</a>
+			   <a style="margin-left:100px;margin-top:0px;" href="http://localhost:8012/chiefexpertprofile2/<%=data[0].id%>"> Edit Freezed Questions</a>
+			    
+			  <a style="margin-left:50px;" href="http://localhost:8012/chiefexpertprofile1/<%=data[0].id%>">Freeze Questions</a>
+			   
+			  
+	         
+			   <body background="/images/scenary.jpg">
+			   <div style="margin-left:1000px;"><%=data[0].email%>
+                 <img alt="User Pic" style="width:38px;height:38px;margin-left:40px;border-radius=50%;-moz-border-radius:50%;-webkit-border-radius:50%;" class="rounded" src="http://localhost:8012/images/upload_images/<%=data[0].image%>">
+				</div>
+				 
+	         </body>
+			 </div>
+				</nav>
+				
+				<div style="margin-left:400px;margin-top:150px;">
+		<h1>WELCOME</h1>
+		<h1>TO</h1>
+		<h1>LARGE QUESTION BANK</h1>
+		</div>
+				  
+        <% } %>
+        </div>
